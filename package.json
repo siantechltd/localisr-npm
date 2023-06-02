@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "localisr",
+  "version": "1.0.2",
+  "description": "Localisr exists to make a developer's life a bit easier when developing multi-language websites and apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "multilanguage",
+    "translations",
+    "i18n",
+    "internationalization",
+    "localization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siantechltd/localisr-npm.git"
+  },
+  "bugs": {
+    "url": "https://localisr.dev/issues"
+  },
+  "author": "SiaNTech LTD",
+  "license": "MIT",
+  "homepage": "https://localisr.com",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
