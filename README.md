@@ -27,7 +27,7 @@ $ npm install localisr
 Using yarn:
 
 ```bash
-$ yarn add axios
+$ yarn add localisr
 ```
 
 Once the package is installed, you can import the library using `import` approach:

@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "localisr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Localisr exists to make a developer's life a bit easier when developing multi-language websites and apps.",
   "main": "index.js",
   "scripts": {
