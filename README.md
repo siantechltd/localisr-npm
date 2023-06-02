@@ -1,6 +1,7 @@
 <h1 align="center">
    <b>
-        <a href="https://localisr.com"><img src="https://localisr.com/static/media/logo@512.74f2598560a95ff14e47.png" /></a><br />
+        <a href="https://localisr.com">
+        <img src="https://localisr.com/images/localisr.png" height="50" /></a><br />
     </b>
 </h1>
 
