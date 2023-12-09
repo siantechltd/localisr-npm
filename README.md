@@ -1,7 +1,7 @@
 <h1 align="center">
    <b>
         <a href="https://localisr.com">
-        <img src="https://localisr.com/images/localisr.png" height="50" /></a><br />
+        <img src="https://localisr.com/images/localisr.png" height="50" alt="Localisr - Manage language translations at the click of a button" /></a><br />
     </b>
 </h1>
 
@@ -31,10 +31,15 @@ Using yarn:
 $ yarn add localisr
 ```
 
-Once the package is installed, you can import the library using `import` approach:
+Once the package is installed, you can import the library using `import` or `require` approach:
 
 ```js
-import {LocalisrClient} from 'localisr';
+import {LocalisrClient} from 'localisr'
+```
+or
+
+```js
+const {LocalisrClient} = require('localisr')
 ```
 
 ## Example
@@ -55,6 +60,22 @@ const translations = await localisr
     .setLanguage(<language>)
     .groups()
     .getTranslations(<group-name>)
+    .catch((error) => {
+        console.log(error.response)
+    });
+```
+> Get all added documents
+
+```js
+// initialize Localisr client
+const localisr = new LocalisrClient(
+    <LOCALISR_ACCESS_TOKEN>, 
+    <LOCALISR_PROJECT_KEY>
+);
+
+// get translations for all the keys in 'user-login' group
+const documents = await localisr
+    .documents()
     .catch((error) => {
         console.log(error.response)
     });
