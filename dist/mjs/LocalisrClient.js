@@ -3,6 +3,7 @@ import { GroupsServices } from './Services/GroupsService.js';
 import { ProjectsService } from './Services/ProjectsService.js';
 import { DocumentsService } from './Services/DocumentsService.js';
 import { KeysServices } from "./Services/KeysService.js";
+import { EntitiesServices } from './Services/EntitiesService';
 export class LocalisrClient {
     client;
     language = 'en';
@@ -15,6 +16,9 @@ export class LocalisrClient {
     }
     keys() {
         return new KeysServices(this.language, this.client);
+    }
+    entities() {
+        return new EntitiesServices(this.language, this.client);
     }
     groups() {
         return new GroupsServices(this.language, this.client);

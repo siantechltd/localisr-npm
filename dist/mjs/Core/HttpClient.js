@@ -23,5 +23,12 @@ export class HttpClient {
         });
     }
     ;
+    async post(path, params) {
+        const url = this.serverUrl + path;
+        return axios.post(url, JSON.stringify(params), {
+            headers: this.generateHeaders()
+        });
+    }
+    ;
 }
 //# sourceMappingURL=HttpClient.js.map

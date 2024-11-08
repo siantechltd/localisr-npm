@@ -13,6 +13,8 @@ class AbstractService {
             default:
             case 'get':
                 return this.client.get(path, params || {});
+            case 'post':
+                return this.client.post(path, params || {});
         }
     }
     ;

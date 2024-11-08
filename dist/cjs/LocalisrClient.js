@@ -6,6 +6,7 @@ const GroupsService_js_1 = require("./Services/GroupsService.js");
 const ProjectsService_js_1 = require("./Services/ProjectsService.js");
 const DocumentsService_js_1 = require("./Services/DocumentsService.js");
 const KeysService_js_1 = require("./Services/KeysService.js");
+const EntitiesService_1 = require("./Services/EntitiesService");
 class LocalisrClient {
     client;
     language = 'en';
@@ -18,6 +19,9 @@ class LocalisrClient {
     }
     keys() {
         return new KeysService_js_1.KeysServices(this.language, this.client);
+    }
+    entities() {
+        return new EntitiesService_1.EntitiesServices(this.language, this.client);
     }
     groups() {
         return new GroupsService_js_1.GroupsServices(this.language, this.client);

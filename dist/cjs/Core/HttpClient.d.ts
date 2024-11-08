@@ -11,4 +11,5 @@ export declare class HttpClient {
         'X-Localisr-Project-Token': string;
     };
     get(path: string, params: {}): Promise<AxiosResponse>;
+    post(path: string, params: {}): Promise<AxiosResponse>;
 }

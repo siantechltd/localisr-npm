@@ -28,4 +28,12 @@ export class HttpClient {
       params
     })
   };
+
+  async post (path: string, params: {}):Promise<AxiosResponse> {
+    const url = this.serverUrl + path
+
+    return axios.post(url, JSON.stringify(params), {
+      headers: this.generateHeaders()
+    })
+  };
 }

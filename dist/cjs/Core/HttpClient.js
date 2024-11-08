@@ -26,6 +26,13 @@ class HttpClient {
         });
     }
     ;
+    async post(path, params) {
+        const url = this.serverUrl + path;
+        return axios_1.default.post(url, JSON.stringify(params), {
+            headers: this.generateHeaders()
+        });
+    }
+    ;
 }
 exports.HttpClient = HttpClient;
 //# sourceMappingURL=HttpClient.js.map
