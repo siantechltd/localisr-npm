@@ -12,6 +12,10 @@ export class AbstractService {
                 return this.client.get(path, params || {});
             case 'post':
                 return this.client.post(path, params || {});
+            case 'patch':
+                return this.client.patch(path, params || {});
+            case 'delete':
+                return this.client.delete(path, params || {});
         }
     }
     ;

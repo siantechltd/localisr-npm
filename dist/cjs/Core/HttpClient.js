@@ -33,6 +33,21 @@ class HttpClient {
         });
     }
     ;
+    async patch(path, params) {
+        const url = this.serverUrl + path;
+        return axios_1.default.post(url, JSON.stringify(params), {
+            headers: this.generateHeaders()
+        });
+    }
+    ;
+    async delete(path, params) {
+        const url = this.serverUrl + path;
+        return axios_1.default.delete(url, {
+            headers: this.generateHeaders(),
+            data: JSON.stringify(params)
+        });
+    }
+    ;
 }
 exports.HttpClient = HttpClient;
 //# sourceMappingURL=HttpClient.js.map

@@ -12,4 +12,6 @@ export declare class HttpClient {
     };
     get(path: string, params: {}): Promise<AxiosResponse>;
     post(path: string, params: {}): Promise<AxiosResponse>;
+    patch(path: string, params: {}): Promise<AxiosResponse>;
+    delete(path: string, params: {}): Promise<AxiosResponse>;
 }

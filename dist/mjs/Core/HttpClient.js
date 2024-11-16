@@ -30,5 +30,20 @@ export class HttpClient {
         });
     }
     ;
+    async patch(path, params) {
+        const url = this.serverUrl + path;
+        return axios.post(url, JSON.stringify(params), {
+            headers: this.generateHeaders()
+        });
+    }
+    ;
+    async delete(path, params) {
+        const url = this.serverUrl + path;
+        return axios.delete(url, {
+            headers: this.generateHeaders(),
+            data: JSON.stringify(params)
+        });
+    }
+    ;
 }
 //# sourceMappingURL=HttpClient.js.map

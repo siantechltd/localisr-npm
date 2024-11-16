@@ -36,4 +36,21 @@ export class HttpClient {
       headers: this.generateHeaders()
     })
   };
+
+  async patch (path: string, params: {}):Promise<AxiosResponse> {
+    const url = this.serverUrl + path
+
+    return axios.post(url, JSON.stringify(params), {
+      headers: this.generateHeaders()
+    })
+  };
+
+  async delete (path: string, params: {}):Promise<AxiosResponse> {
+    const url = this.serverUrl + path
+
+    return axios.delete(url, {
+      headers: this.generateHeaders(),
+      data: JSON.stringify(params)
+    })
+  };
 }

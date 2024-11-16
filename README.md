@@ -76,6 +76,7 @@ const localisr = new LocalisrClient(
 // get translations for all the keys in 'user-login' group
 const documents = await localisr
     .documents()
+    .getAll()
     .catch((error) => {
         console.log(error.response)
     });
